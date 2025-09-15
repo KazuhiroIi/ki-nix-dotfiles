@@ -13,11 +13,24 @@
   # nix-command and flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # store optimization
+  nix.settings.auto-optimise-store = true;
+
+  # garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  # kernel type
+  boot.KernelPackages = pkgs.linuxKernel.packages.linux_zen;
+
+  networking.hostName = "knix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -56,6 +69,30 @@
   services.xserver.xkb = {
     layout = "jp";
     variant = "";
+  };
+
+  # input method
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = [pkgs.fcitx5-mozc];
+  };
+
+  fonts = {
+    fonts = with pkgs; [ 
+      noto-fonts-cjk-serif 
+      noto-fonts-cjk-sans 
+      noto-fonts-emoji 
+      nerd-fonts.jetbrains-mono 
+    ];
+    fontDir.enable = true;
+    fontconfig = {
+      defaultFonts = {
+        serif = ["Noto Serif CJK JP" "Noto Color Emoji"];
+	sansSerif = ["Noto Sans CJK JP" "Noto Color Emoji"];
+	monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
+	emoji = ["Noto Color Emoji"];
+      };
+    };
   };
 
   # Enable CUPS to print documents.
