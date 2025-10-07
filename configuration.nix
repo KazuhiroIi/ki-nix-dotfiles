@@ -127,6 +127,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Install git.
+  programs.git.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
