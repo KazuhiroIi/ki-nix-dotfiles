@@ -3,14 +3,15 @@
         modifiers: [
             Super,
         ],
-        key: "c",
-    ): Minimize,
+        key: "e",
+    ): System(HomeFolder),
     (
         modifiers: [
             Super,
         ],
-        key: "e",
-    ): System(HomeFolder),
+        key: "c",
+        description: Some("VS Code"),
+    ): Spawn("code"),
     (
         modifiers: [
             Super,
@@ -29,4 +30,10 @@
         ],
         key: "f",
     ): Fullscreen,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+    ): Minimize,
 }
