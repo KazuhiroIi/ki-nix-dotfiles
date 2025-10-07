@@ -9,5 +9,6 @@
   
   imports = [
     ./home/coding.nix
+    ./home/zsh.nix
   ];
 }

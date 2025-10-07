@@ -129,6 +129,10 @@
   # Install git.
   programs.git.enable = true;
 
+  # use zsh.
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
