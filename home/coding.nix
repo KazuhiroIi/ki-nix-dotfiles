@@ -2,8 +2,9 @@
   home.packages = with pkgs; [
     vscode
     uv
-    bun
     gh
+    nodejs-slim_24
+    nodePackages.pnpm
   ];
 
   programs.direnv = {
