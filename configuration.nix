@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration/knix2-on-virtualbox.nix
     ];
   
   # nix-command and flakes
