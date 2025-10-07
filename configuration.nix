@@ -27,9 +27,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # kernel type
-  boot.KernelPackages = pkgs.linuxKernel.packages.linux_zen;
-
   networking.hostName = "knix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
