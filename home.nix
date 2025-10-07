@@ -10,5 +10,6 @@
   imports = [
     ./home/coding.nix
     ./home/zsh.nix
+    ./home/cosmic.nix
   ];
 }
