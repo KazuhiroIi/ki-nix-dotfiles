@@ -7,7 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration/knix2-on-virtualbox.nix
+      ./hardware-configuration/knix-on-klaptop-qemu.nix
+      ./bootLoader/bios-grub.nix
     ];
   
   # nix-command and flakes
@@ -22,10 +23,6 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "knix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
