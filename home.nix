@@ -1,15 +1,15 @@
 {
   home = rec {
     username="ki";
-    homeDirectory = "/home/${username}";
+    homeDirectory = "/modules/${username}";
     stateVersion = "25.05";
   };
 
   programs.home-manager.enable = true;
   
   imports = [
-    ./home/coding.nix
-    ./home/zsh.nix
-    ./home/cosmic.nix
+    ./modules/coding.nix
+    ./modules/zsh.nix
+    ./modules/cosmic.nix
   ];
 }
