@@ -12,5 +12,6 @@
     ./modules/zsh.nix
     ./modules/utils.nix
     ./modules/aliases.nix
+    ./modules/cosmic.nix
   ];
 }
