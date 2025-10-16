@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     vscode
     uv
+    git
     nodejs-slim_24
     nodePackages.pnpm
   ];
@@ -15,6 +16,4 @@
     enable = true;
     gitCredentialHelper.enable = true;
   };
-
-  programs.git.enable = true;
 }
