@@ -10,6 +10,7 @@
   imports = [
     ./modules/coding.nix
     ./modules/zsh.nix
-    ./modules/cosmic.nix
+    ./modules/utils.nix
+    ./modules/aliases.nix
   ];
 }

@@ -7,18 +7,33 @@
     };
   };
 
-  outputs = inputs: {
-    homeConfigurations = {
-      myHome = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = import inputs.nixpkgs {
-	  system = "x86_64-linux";
-	  config.allowUnfree = true;
-	};
-	extraSpecialArgs = { inherit inputs; };
-	modules = [
-	  ./home.nix
-	];
-      };
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+    #nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+    #  system = "x86_64-linux";
+    #  modules = [
+    #    ./hosts/desktop/configuration.nix
+    #    ./common-configuration.nix
+    #
+    #    home-manager.nixosModules.home-manager {
+    #      home-manager.useGlobalPkgs = true;
+    #      home-manager.useUserPackages = true;
+    #      home-manager.users.ki = import ./home.nix;
+    #    }
+    #  ];
+    #};
+   
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./hosts/laptop/configuration.nix
+        ./common-configuration.nix
+ 
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.ki = import ./home.nix;
+        }
+      ];
     };
   };
 }
