@@ -13,5 +13,6 @@
     ./modules/utils.nix
     ./modules/aliases.nix
     ./modules/cosmic.nix
+    ./modules/fonts.nix
   ];
 }
