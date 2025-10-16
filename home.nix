@@ -8,11 +8,10 @@
   programs.home-manager.enable = true;
   
   imports = [
-    ./modules/coding.nix
-    ./modules/zsh.nix
-    ./modules/utils.nix
-    ./modules/aliases.nix
-    ./modules/cosmic.nix
-    ./modules/fonts.nix
+    ./home/coding.nix
+    ./home/zsh.nix
+    ./home/utils.nix
+    ./home/aliases.nix
+    ./home/cosmic.nix
   ];
 }
