@@ -13,5 +13,6 @@
     ./home/utils.nix
     ./home/aliases.nix
     ./home/cosmic.nix
+    ./home/fcitx5.nix
   ];
 }

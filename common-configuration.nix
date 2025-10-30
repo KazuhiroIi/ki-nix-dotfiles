@@ -9,5 +9,6 @@
   imports = [
     ./modules/fonts.nix
     ./modules/cosmic.nix
+    ./modules/fcitx5.nix
   ];
 }
