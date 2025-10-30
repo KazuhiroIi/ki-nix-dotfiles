@@ -3,6 +3,18 @@
         modifiers: [
             Super,
         ],
+        key: "n",
+    ): Minimize,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "t",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
         key: "e",
     ): System(HomeFolder),
     (
@@ -16,24 +28,19 @@
         modifiers: [
             Super,
         ],
-        key: "Return",
-    ): System(Terminal),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "F11",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
         key: "f",
     ): Fullscreen,
     (
         modifiers: [
             Super,
         ],
-        key: "n",
-    ): Minimize,
+        key: "Return",
+        description: Some("Terminal"),
+    ): Spawn("wezterm"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "F11",
+    ): Disable,
 }
