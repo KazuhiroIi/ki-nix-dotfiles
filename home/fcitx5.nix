@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    fcitx5-configtool
+    qt6Packages.fcitx5-configtool
   ];
 
   home.sessionVariables = {
