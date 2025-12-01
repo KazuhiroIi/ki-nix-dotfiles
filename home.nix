@@ -15,5 +15,6 @@
     ./home/cosmic.nix
     ./home/fcitx5.nix
     ./home/wezterm.nix
+    ./home/neovim.nix
   ];
 }
