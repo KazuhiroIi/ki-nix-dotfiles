@@ -5,6 +5,7 @@
     git
     nodejs-slim_24
     nodePackages.pnpm
+    github-copilot-cli
   ];
 
   programs.direnv = {
