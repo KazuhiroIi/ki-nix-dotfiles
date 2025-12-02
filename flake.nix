@@ -5,14 +5,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nvim-config = {
-      url = "github:KazuhiroIi/ki-neovim-dotfiles";
-      flake = false;
-    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nvim-config, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -23,7 +18,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.ki = import ./home.nix;
-          home-manager.extraSpecialArgs = { inherit nvim-config; };
         }
       ];
     };
@@ -38,7 +32,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.ki = import ./home.nix;
-          home-manager.extraSpecialArgs = { inherit nvim-config; };
         }
       ];
     };
