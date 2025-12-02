@@ -36,10 +36,27 @@
         "type": "github"
       }
     },
+    "nvim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764672470,
+        "narHash": "sha256-vFj5pgfK0d4Y9DBpGcHb23DtzgfIjdu+wPXSuyFjtRw=",
+        "owner": "KazuhiroIi",
+        "repo": "ki-neovim-dotfiles",
+        "rev": "68af67db52a53cc2b345a0a61af1c6f4d60d89c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "KazuhiroIi",
+        "repo": "ki-neovim-dotfiles",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nvim-config": "nvim-config"
       }
     }
   },
